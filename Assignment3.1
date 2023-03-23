@@ -1,0 +1,36 @@
+#include <bits/stdc++.h>
+using namespace std;
+  
+void printPattern(int n, int m, bool flag)
+{
+    cout << m << " ";
+    if (flag == false && n == m)
+        return;
+  
+    if (flag) {
+
+        if (m - 5 > 0)
+            printPattern(n, m - 5, true);
+        else 
+            printPattern(n, m - 5, false);
+    }
+    else 
+        printPattern(n, m + 5, false);
+}
+  
+void PrintPattern(int m)
+{
+    if (m > 0) {
+        cout << m << '\n';
+        PrintPattern(m - 5);
+    }
+  
+    cout << m << '\n';
+}
+int main()
+{
+    int n = 16;
+      
+    PrintPattern(n);
+    return 0;
+}
