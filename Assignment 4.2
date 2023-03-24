@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    char x;  // Value of the input character
+
+    printf("-----Enter a character to check itself-----\n");
+    scanf("%c", &x);
+
+    if ((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z')) {
+        printf("\n%c is an alphabet character.\n", x);
+    } else {
+        printf("\n%c is not an alphabet character.\n", x);
+    }
+    return 0;
+}
